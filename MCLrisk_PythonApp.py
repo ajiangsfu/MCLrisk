@@ -7,15 +7,15 @@ def riskPred():
 
     st.subheader("Estimated 2-year PFS2 with 2L BTKi in R/R MCL")  
     
-    mipi = st.selectbox('MIPI risk category at dignosis', ('LOW','INTERMED', 'HIGH'))
-    ki67 = st.selectbox('Ki67 at diagnosis >= 30', ('Yes', 'No'))
+    mipi = st.selectbox('MIPI risk category at dignosis', ('LOW','INTERMEDIATE', 'HIGH'))
+    ki67 = st.selectbox('Ki67 at diagnosis', ('>=30%', '<30%'))
     blas = st.selectbox('Blastoid/pleomorphic at diagnosis', ('Yes', 'No'))
     tobtki = st.number_input('Time to 2L BTKi (months)')
     
     ### data transformation
     mipi_m = 0
     mipi_h = 0
-    if mipi == 'INTERMED':
+    if mipi == 'INTERMEDIATE':
       mipi_m = 1
     elif mipi == "HIGH":
       mipi_h = 1
@@ -25,7 +25,7 @@ def riskPred():
       blasy = 1
     
     ki67y = 0
-    if ki67 == "Yes":
+    if ki67 == ">=30%":
       ki67y = 1
    
     ## models with spline
