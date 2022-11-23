@@ -33,9 +33,9 @@ def riskPred():
     haz2 = 0.91930212  
     sprob = math.exp(-haz2*math.exp(sres))  
     riskgr = "intermediate"
-      if sprob <= 0.3:
-        riskgr = "high"
-      elif sprob >= 0.6:
+    if sprob <= 0.3:
+      riskgr = "high"
+    elif sprob >= 0.6:
         riskgr = "low"
       
     ores = 0.21199219+0.045028918*mipi_m+0.83757694*mipi_h +0.28606937*blasy+0.33543194*ki67y-0.044884898*tobtki+4.1977467e-05*max(tobtki-2,0)**3-7.9279546e-05*max(tobtki-14,0)**3+4.379913e-05*max(tobtki-34.95,0)**3-6.4970514e-06*max(tobtki-77.7,0)**3 
