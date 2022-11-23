@@ -45,14 +45,12 @@ def riskPred():
     if st.button('Calculate'):
       st.text("")
       out = str(round(sprob*100,2)) + "%"
-      st.write("Your 2 years PFS probability based on spline model is ", out)
-      st.write("Your risk level is " + riskgr)  
-
+      st.write("The 2 year PFS2 probability based on spline model is ", out, ".")
+      st.write("The risk level is " + riskgr + ".")  
       oout = str(round(oprob*100,2)) + "%"
       st.text("")
-      st.write("Your 2 years overall survival probability based on spline model is ", oout)
-      
-        
+      st.write("The 2 year OS2 probability based on spline model is ", oout, ".")
+
 riskPred()
 
 
