@@ -29,7 +29,7 @@ def riskPred():
       ki67y = 1
    
     ## models with spline
-    sres = 0.5261312+0.17477834*mipi_m + 0.24310161*mipi_h+0.12879252*blasy+0.59915019*ki67y-0.068082474*tobtki+4.7572897e-05*max(tobtki-2,0)**3-7.4391067e-05*max(tobtki-14,0)**3+2.6606845e-05*max(tobtki-34.95,0)**3+ 2.113245e-07*max(tobtki-77.7,0)**3 
+    sres = 0.5261312+0.17477834*mipi_m + 0.24310161*mipi_h+0.12879252*blasy+0.59915019*ki67y-0.068082474*tobtki+4.7572897e-05*(max(tobtki-2,0)**3)-7.4391067e-05*(max(tobtki-14,0)**3)+2.6606845e-05*(max(tobtki-34.95,0)**3)+ 2.113245e-07*(max(tobtki-77.7,0)**3) 
     haz2 = 0.91930212  
     sprob = math.exp(-haz2*math.exp(sres))  
     riskgr = "intermediate"
