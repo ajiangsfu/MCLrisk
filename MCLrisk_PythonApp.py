@@ -7,7 +7,7 @@ def riskPred():
 
     st.subheader("Estimated 2-year PFS2 with 2L BTKi in R/R MCL")  
     
-    mipi = st.selectbox('MIPI risk category at dignosis', ('LOW','INTERMEDIATE', 'HIGH'))
+    mipi = st.selectbox('MIPI risk category at diagnosis', ('LOW','INTERMEDIATE', 'HIGH'))
     ki67 = st.selectbox('Ki67 at diagnosis', ('>=30%', '<30%'))
     blas = st.selectbox('Blastoid/pleomorphic at diagnosis', ('Yes', 'No'))
     tobtki = st.number_input('Time to 2L BTKi (months)')
