@@ -37,7 +37,6 @@ def riskPred():
     elif sprob >= 0.6:
         riskgr = "low"
       
-    # function(POD_CAT = "POD>24",KI67_OVER30_DX = 0,MIPI_DX_int_high = 0) {-0.75143452+1.0572744*(POD_CAT=="POD6-24")+1.657246*(POD_CAT=="POD6")+0.35761732*KI67_OVER30_DX-0.06961106*MIPI_DX_int_high }
     ores = -0.75143452+1.0572744*pod6to24+1.657246*pod6+0.35761732*ki67y-0.06961106*mipi_ih
     ohaz2 = 0.516876764860384
     oprob = math.exp(-ohaz2*math.exp(ores))
